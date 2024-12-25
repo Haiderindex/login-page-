@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="signIn">
+
+ 
+    <label for="">
+        Name:
+        <input type="text" id="username">
+    </label>
+    <br>
+     <label for="useremail">
+        Email:
+        <input type="email" id="useremail">
+      </label>
+      <br>
+      <label for="userpassword">
+        Password:
+        <input type="password" id="userpassword">
+     </label>
+     <br>
+    
+
+<a href="./login.html">
+<button onclick=" SignUp()"> Sign Up </a></button>
+
+  </div>
+
+    
+      <script>
+        function SignUp(){
+         let useremail = document.getElementById("useremail").value;
+         let userpassword = document.getElementById("userpassword").value;
+         let username = document.getElementById("username").value;
+           
+           localStorage.setItem("username", username )
+           localStorage.setItem("useremail", useremail )
+           localStorage.setItem("userpassword", userpassword )
+        }
+      </script>
+</body>
+</html>

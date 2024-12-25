@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="signIn">
+        <label for="">
+            Email:
+            <input type="email" id="useremail">
+        </label>
+        <br>
+        <label for="">
+            Password:
+            <input type="password" id="userpassword">
+        </label>
+        <br>
+        <button onclick="Login()">Login </button>
+    </div>
+    
+    <script>
+    function Login(){
+        let useremail = document.getElementById("useremail").value;
+        let userpassword = document.getElementById("userpassword").value;
+
+        let ABC = localStorage.getItem("useremail",useremail);
+        let BAC = localStorage.getItem("userpassword",userpassword);
+    
+       if (useremail == "" && userpassword == "") {
+           alert("please fill the input correctly ")
+       } else {
+        if(useremail == ABC){
+                if (userpassword == BAC) {
+                alert("user login")
+                } else {
+                alert("Password did not mactcyh")
+                }
+        }else{
+            alert("email did match ")
+        }
+       } 
+      
+    }
+    </script>
+
+
+
+
+</body>
+</html>
